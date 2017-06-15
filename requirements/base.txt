@@ -49,3 +49,5 @@ redis>=2.10.5
 
 
 # Your custom requirements go here
+oauth2>=1.5.211
+discogs_client>=2.1.0

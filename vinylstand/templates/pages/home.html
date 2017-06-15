@@ -1,1 +1,34 @@
 {% extends "base.html" %}
+
+{% block content %}
+    <h2>
+        Welcome to Vinylstand {{ request.user }}!
+    </h2>
+
+    <form>
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" name="username" class="form-control" placeholder="Username"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <input type="password" name="password" class="form-control" placeholder="Password"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#" class="btn btn-info">Login</a>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div class="col-md-12">
+                <a href="{% url 'discogs_oauth:authorize' %}" class="btn btn-primary">Connect with Discogs</a>
+            </div>
+        </div>
+
+    </form>
+{% endblock content %}
