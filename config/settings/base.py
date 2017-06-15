@@ -31,7 +31,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'vinylstand.users',
-    'vinylstand.discogs_oauth'
+    'vinylstand.discogs_oauth',
+    'vinylstand.discogs'
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -218,3 +219,5 @@ ADMIN_URL = r'^admin/'
 ALLOWED_HOSTS = ['*']
 CONSUMER_KEY = env('CONSUMER_KEY')
 CONSUMER_SECRET = env('CONSUMER_SECRET')
+CALLBACK_URL = env('CALLBACK_URL')
+USER_AGENT = 'Vinylstand/1.0'

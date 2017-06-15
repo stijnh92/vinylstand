@@ -1,5 +1,3 @@
-import os
-
 from django.conf import settings
 from django.contrib.auth import login
 from django.http import HttpResponse, JsonResponse
@@ -13,10 +11,8 @@ from .backend import DiscogsBackend
 
 CONSUMER_KEY = settings.CONSUMER_KEY
 CONSUMER_SECRET = settings.CONSUMER_SECRET
-
-CALLBACK_URL = 'http://090f6be2.ngrok.io/discogs/oauth/callback'
-
-USER_AGENT = 'vinylstand/1.0'
+CALLBACK_URL = settings.CALLBACK_URL
+USER_AGENT = settings.USER_AGENT
 
 
 def authorize(request):

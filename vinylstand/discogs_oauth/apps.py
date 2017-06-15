@@ -1,7 +1,6 @@
 from django.apps import AppConfig
 
 
-class DiscogsConfig(AppConfig):
-    name = 'vinylstand.discogs'
-    verbose_name = "Discogs"
-
+class DiscogsOAuthConfig(AppConfig):
+    name = 'vinylstand.discogs_oauth'
+    verbose_name = "Discogs OAuth v1.0a"

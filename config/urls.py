@@ -18,6 +18,7 @@ urlpatterns = [
 
     # Your stuff: custom urls includes go here
     url(r'^discogs/oauth/', include('vinylstand.discogs_oauth.urls', namespace='discogs_oauth')),
+    url(r'^discogs/', include('vinylstand.discogs.urls', namespace='discogs')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
