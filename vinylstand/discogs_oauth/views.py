@@ -58,7 +58,7 @@ def callback(request):
     auth_backend = 'vinylstand.discogs_oauth.backend.DiscogsBackend'
     login(request, user, backend=auth_backend)
 
-    return redirect('home')
+    return redirect('discogs:profile', username=request.user.username)
 
 
 def get_discogs_user(discogs_client, access_token, access_secret):

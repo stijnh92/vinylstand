@@ -1,13 +1,13 @@
 from django.conf.urls import url
 
-from .views import collection
+from .views import profile
 
 app_name = 'discogs'
 
 urlpatterns = [
     url(
-        regex=r'^collection',
-        view=collection,
-        name='collection'
+        regex=r'^(?P<username>[\w.@+-]+)/$',
+        view=profile,
+        name='profile'
     ),
 ]

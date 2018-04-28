@@ -1,0 +1,148 @@
+body, html {
+    height: 100%;
+}
+
+.background {
+    /* The image used */
+  /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+  background: url("../images/home.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.page-title {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  padding-top: 40px;
+}
+
+.page-title > h1{
+  font-weight: bold;
+}
+
+.homepage-login {
+  margin-top: 40px;
+}
+
+.btn-discogs {
+  background-color: black;
+}
+
+.img-discogs {
+  max-height: 25px;
+}
+
+.profile-details{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav-home{
+  max-height: 40px;
+
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .55s ease-in-out;
+          transition:         transform .55s ease-in-out;
+}
+
+.nav-home:hover{
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.home-login-input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+
+.alert-debug {
+  color: black;
+  background-color: white;
+  border-color: #d6e9c6;
+}
+
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+/* This is a fix for the bootstrap4 alpha release */
+@media (max-width: 47.9em) {
+  .navbar-nav .nav-item {
+    float: none;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0;
+  }
+
+  .nav.navbar-nav.pull-xs-right {
+    float: none !important;
+  }
+}
+
+/* Display django-debug-toolbar.
+   See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
+   and https://github.com/pydanny/cookiecutter-django/issues/317
+*/
+[hidden][style="display: block;"] {
+  display: block !important;
+}
+
+
+.vinylstand {
+  height: 100%;
+  border: 10px black solid;
+  overflow: hidden;
+  background-size: 10px 230px;
+  margin: 80px auto 0;
+}
+
+.book {
+  height: 300px;
+  width: 15px;
+  float: left;
+  color: white;
+  font-size: 0.9em;
+  font-family: Verdana, sans-serif;
+  transition: transform 0.4s ease;
+  padding-top: 15px;
+  border-top: 5px black solid;
+  border-bottom: 5px black solid;
+  padding-bottom: 15px;
+  border-left: 1px solid black;
+
+  background-color: lightcyan;
+}
+
+.book-tilted {
+  float: left;
+  width: 74px;
+}
+
+.book-tilted > .book {
+  transform: translateY(-3px) translateX(15px) rotate(9deg) ;
+}
+
+.book:hover {
+  transform: scale(1.25);
+}
+
+.book h5 {
+  padding: 0;
+  font-size: 1em;
+  transform-origin: 0% 0%;
+  transform: rotate(0.25turn) translateY(-10px);
+  width: 170px;
+  color: black;
+}

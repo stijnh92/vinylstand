@@ -1,37 +1,20 @@
 {% extends "base.html" %}
+{% load staticfiles%}
 
 {% block content %}
-    <h2>
-        Welcome to Vinylstand {{ request.user }}!
-    </h2>
+    <div class="page-title">
+        <h1>
+            vinylstand
+        </h1>
+        <h4>
+            explore record collections in an interactive way
+        </h4>
 
-    <form>
-        <div class="row">
-            <div class="col-md-3">
-                <input type="text" name="username" class="form-control" placeholder="Username"/>
-            </div>
+        <div class="homepage-login">
+            <p>
+                <a href="#">start exploring</a> or <a href="{% url 'discogs_oauth:authorize' %}">connect</a> your own Discogs account <br />
+            </p>
         </div>
-
-        <div class="row">
-            <div class="col-md-3">
-                <input type="password" name="password" class="form-control" placeholder="Password"/>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3">
-                <a href="#" class="btn btn-info">Login</a>
-            </div>
-        </div>
-
-        <div class="row mt-1">
-            <div class="col-md-12">
-                <a href="{% url 'discogs_oauth:authorize' %}" class="btn btn-primary">Connect with Discogs</a>
-            </div>
-        </div>
-
-    </form>
-
-    <a href="{% url 'discogs:collection' %}" class="btn btn-primary">Go to my collection.</a>
+    </div>
 
 {% endblock content %}

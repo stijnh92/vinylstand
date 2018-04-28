@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="page-title">
+        <h1>
+            {{ username }}
+        </h1>
+
+        <ul class="profile-details">
+            <li>member since: {{ registered | date:"d M Y"}}</li>
+            <li>collection size: {{ num_collection }}</li>
+        </ul>
+
+        <div class="vinylstand" style="width: {{width}}px; transform: translate3d({{offset}}px, 0px, 0px);">
+
+            {% for release in releases %}
+                <div class="book"
+                     data-id="{{ forloop.counter }}" data-container="body" data-toggle="popover"
+                     data-placement="top" data-content="{{ release.release.title }}">
+                    <h5>test</h5>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    <!--
+        <ul>
+            {% for release in releases %}
+                <li>{{ release.release.title }}</li>
+            {% endfor %}
+        </ul>
+
+-->
+
+    </div>
+
+{% endblock content %}
